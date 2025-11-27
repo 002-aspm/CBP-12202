@@ -9,13 +9,11 @@ on:
 jobs:
   build:
     steps:
-      - name: Deploy Chart A
-        uses: docker://alpine:3.18
-        shell: sh
-        run: |
-          echo "Simulating install of nginx 1.2.3 in default"
-      - name: Deploy Chart B
-        uses: docker://alpine:3.18
-        shell: sh
-        run: |
-          echo "Simulating install of redis 6.0.0 in cache"
+      - name: Echo Step A
+        uses: cloudbees-io/echo@v1
+        with:
+          message: "This is step A calling the echo action."
+      - name: Echo Step B
+        uses: cloudbees-io/echo@v1
+        with:
+          message: "This is step B calling the echo action."
