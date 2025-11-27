@@ -1,3 +1,4 @@
+apiVersion: automation.cloudbees.io/v1alpha1
 name: Helm Install
 description: Minimal test action for installing a Helm chart
 inputs:
