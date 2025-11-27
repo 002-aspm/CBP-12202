@@ -16,4 +16,4 @@ jobs:
       - name: Checkout Repo Feature
         uses: cloudbees-io/checkout@v1
         with:
-          ref: feature/test-branch
+          ref: CBP_12202_Test
