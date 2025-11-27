@@ -9,8 +9,15 @@ on:
 jobs:
   build:
     steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo "hello world"
+      - name: Deploy Chart A
+        uses: ./actions/helm-install
+        with:
+          chart: "nginx"
+          version: "1.2.3"
+          namespace: "default"
+      - name: Deploy Chart B
+        uses: ./actions/helm-install
+        with:
+          chart: "redis"
+          version: "6.0.0"
+          namespace: "cache"
