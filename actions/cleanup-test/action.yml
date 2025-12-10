@@ -15,6 +15,9 @@ runs:
         echo "✓ Mock services stopped"
         echo "✓ Test containers stopped"
 
+    - name: Checkout Step ABCD
+      uses: cloudbees-io/checkout@v1
+
     - name: Cleanup Test Data
       uses: docker://alpine:3.20
       shell: sh
