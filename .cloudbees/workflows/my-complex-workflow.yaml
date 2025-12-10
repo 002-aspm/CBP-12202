@@ -87,7 +87,7 @@ jobs:
           echo "✓ Integration test 3: PASSED"
           sleep 3
 
-      - name: Cleanup Test Environment
+      - name: Cleanup Test Environment -test
         uses: ./actions/cleanup-test
         if: always()
 
