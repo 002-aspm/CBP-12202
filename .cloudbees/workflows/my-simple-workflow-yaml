@@ -1,0 +1,21 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: My workflow
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+jobs:
+  build:
+    steps:
+      - name: Checkout Step A
+        uses: cloudbees-io/checkout@v1
+
+      - name: Run Build
+        uses: docker://alpine:3.20
+        shell: sh
+        run: echo "Building the project..."
+
+      - name: Checkout Step B
+        uses: cloudbees-io/checkout@v1
