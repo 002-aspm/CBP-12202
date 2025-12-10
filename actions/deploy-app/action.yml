@@ -57,7 +57,7 @@ runs:
         echo "✓ Application deployed successfully"
 
     - name: Wait for Rollout
-      uses: docker://alpine:3.21
+      uses: docker://alpine:3.21ABCD
       shell: sh
       run: |
         echo "Waiting for deployment to complete..."
